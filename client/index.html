@@ -62,12 +62,10 @@
     <script src="js/app/models/Negociacao.js"></script>
     <script>
         
-        var n1 = new Negociacao();
-        console.log(n1);
+        var n1 = new Negociacao(new Date(), 5, 700);
+        var volume = n1.obtemVolume();
+        console.log(volume);
 
-        var n2 = new Negociacao();
-        console.log(n2);
-
-    </script>
+    </script>s
 </body>
 </html>
