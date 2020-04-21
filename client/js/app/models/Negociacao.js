@@ -8,19 +8,19 @@ class Negociacao { // toda classe c/ "contructor" só pode ser chamada em outro 
 
 	}
 
-	getVolume() { // um método também é um espécie de função. A função dentro de uma classe se chama método
+	get volume() { // um método também é um espécie de função. A função dentro de uma classe se chama método
 		return this._quantidade * this._valor;
 	}  
 
-	getData() {
+	get data() {
 		return this._data;
 	}
 
-	getQuantidade() {
+	get quantidade() {
 		return this._quantidade;
 	}
 
-	getValor () {
+	get valor () {
 		return this._valor;
 	}
 
