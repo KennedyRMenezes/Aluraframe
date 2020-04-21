@@ -5,6 +5,7 @@ class Negociacao { // toda classe c/ "contructor" só pode ser chamada em outro 
 		this._data = data;
 		this._quantidade = quantidade;
 		this._valor = valor;
+		Object.freeze(this);
 
 	}
 

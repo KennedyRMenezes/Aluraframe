@@ -63,8 +63,9 @@
     <script>
         
         var n1 = new Negociacao(new Date(), 5, 700);
-        n1.quantidade = 1000; // quando a propriedade é um get de leitura ela não pode ter valores atribuidos. Nesse caso quantidade ainda continua sendo 5.
-        n1._quantidade = 5000; // porém na propriedade com underline é possível o acesso e troca de valores.
+
+        
+        n1._quantidade = 100000;
 
         console.log(n1.data);
         console.log(n1.quantidade);
@@ -74,3 +75,10 @@
     </script>s
 </body>
 </html>
+
+
+// --- n1.quantidade = 1000; // quando a propriedade é um get de leitura ela não pode ter valores atribuidos. Nesse caso quantidade ainda continua sendo 5.
+
+// --- n1._quantidade = 5000; // porém na propriedade com underline é possível o acesso e troca de valores.
+
+// --- Object.freeze(n1); // congela um objeto e não poder ser alterado.
