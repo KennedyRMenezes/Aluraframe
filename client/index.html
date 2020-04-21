@@ -62,9 +62,9 @@
     <script src="js/app/models/Negociacao.js"></script>
     <script>
         
-        var hoje = new Date();
+        let hoje = new Date(); // let deixar a váriavel em bloco, nã deixando vazar para outras partes do código.
 
-        var n1 = new Negociacao(new Date(), 5, 700);
+        let n1 = new Negociacao(new Date(), 5, 700);
 
         console.log(n1.data);
 
