@@ -12,12 +12,12 @@ class NegociacaoController {
 	adiciona (event) {
 		event.preventDefault();
 
-		console.log(typeof(this._inputData.value));
+		let data = new Date(this._inputData.value.split('-')); // pode ser usado com uma expressão regular --> .replace(/-/g, ',')
 
-		console.log(this._inputData.value);
+		console.log(data);
 
 
-		// adicionar a negociação em uma lista
+		
 
 	}
 
