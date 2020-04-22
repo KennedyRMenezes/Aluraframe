@@ -11,7 +11,7 @@
     
     <h1 class="text-center">Negociações</h1>
     
-    <form class="form">
+    <form class="form" onsubmit="negociacaoController.adiciona(event)"> <!-- Usando uma ação do JS no HTML "onsubmit" -->
         
         <div class="form-group">
             <label for="data">Data</label>
@@ -60,25 +60,23 @@
     </table>
     
     <script src="js/app/models/Negociacao.js"></script>
+    <script src="js/app/controllers/NegociacaoController.js"></script>
     <script>
         
-        let hoje = new Date(); // let deixar a váriavel em bloco, nã deixando vazar para outras partes do código.
+        let negociacaoController = new NegociacaoController();
 
-        let n1 = new Negociacao(new Date(), 5, 700);
-
-        console.log(n1.data);
-
-        hoje.setDate(11);
-      
-        console.log(n1.data);
-
-    </script>s
+    </script>
+    
 </body>
 </html>
 
 
-// --- n1.quantidade = 1000; // quando a propriedade é um get de leitura ela não pode ter valores atribuidos. Nesse caso quantidade ainda continua sendo 5.
+<!--  
 
-// --- n1._quantidade = 5000; // porém na propriedade com underline é possível o acesso e troca de valores.
+n1.quantidade = 1000; // quando a propriedade é um get de leitura ela não pode ter valores atribuidos. Nesse caso quantidade ainda continua sendo 5.
 
-// --- Object.freeze(n1); // congela um objeto e não poder ser alterado.
+n1._quantidade = 5000; // porém na propriedade com underline é possível o acesso e troca de valores.
+
+Object.freeze(n1); // congela um objeto e não poder ser alterado. 
+
+-->
