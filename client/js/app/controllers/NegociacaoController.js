@@ -12,24 +12,17 @@ class NegociacaoController {
 	adiciona (event) {
 		event.preventDefault();
 
-		let data = new Date(...
-			this._inputData.value
-			.split('-') // pode ser usado com uma expressão regular --> .replace(/-/g, ',')
-			.map((item, indice) => item - indice % 2)
-
-		); 
+		let helper = new DateHelper();
 
 		let negociacao = new Negociacao(
-			data,
+			helper.textoParaData(this._inputData.value),
 			this._inputQuantidade.value,
 			this._inputValor.value,
 		);
 
-		let diaMesAno = negociacao.data.getDate() // arrumando a data para aparecer dia/mês/ano
-		+ "/" + (negociacao.data.getMonth() + 1)
-		+ '/' + negociacao.data.getFullYear();
+		console.log(negociacao);
 
-		console.log(diaMesAno);
+		console.log(helper.dataParaTexto(negociacao.data));
 
 	}
 
