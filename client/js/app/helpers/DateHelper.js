@@ -12,7 +12,7 @@ class DateHelper {
 
 	static textoParaData(texto) {
 
-		if(!/\d{4}-\d{2}-\d{2}/.test(texto)) 
+		if(!/\d{4}-\d{2}-\d{2}/.test(texto)) // expressão regular para validar o formato dia/mês/ano
 			throw new Error ('Deve estar no formato aaaa-mm-dd');
 
 		return new Date(...texto.split('-').map((item, indice) => item - indice % 2));// pode ser usado com uma expressão regular --> .replace(/-/g, ',')
