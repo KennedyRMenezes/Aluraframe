@@ -1,8 +1,5 @@
-class NegociacoesView {
+class NegociacoesView extends View {
 
-	constructor (elemento) {
-		this._elemento = elemento;
-	}
 
 	_template(model) {
 		return `
@@ -38,9 +35,7 @@ class NegociacoesView {
 		`; 
 	}
 
-	update(model) {
-		this._elemento.innerHTML = this._template(model); // iner converte uma string (se constriuida corretamente) com um elemento do DOM.
-	}
+	
 }
 
 
