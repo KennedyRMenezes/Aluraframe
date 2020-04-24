@@ -5,9 +5,13 @@ class View {
 			this._elemento = elemento;
 	}
 
+	template () {
+		throw new Erros('O método template deve ser implementado')
+	}
+
 
 	update(model) {
-		this._elemento.innerHTML = this._template(model);
+		this._elemento.innerHTML = this.template(model);
 	}
 
 }
